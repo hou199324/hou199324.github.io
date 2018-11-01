@@ -230,14 +230,16 @@
     } // load failed, bye~
     var iframe = document.createElement('iframe');
     iframe.id = "bgm";
-    iframe.style = "position: absolute; bottom: 0; left: 30px; border: 0px;";
+    iframe.style = "position: absolute; bottom: 0; background-color: pink; border: 0px;";
     iframe.src = '//music.163.com/song/media/outer/url?id=35723328.mp3';
     console.log(iframe.src)
     iframe.frameborder = "no";
     iframe.marginwidth = "0";
     iframe.marginheight = "0";
     iframe.width = 250;
-    iframe.height = 80;
+    iframe.height = 120;
+    iframe.allowtransparency = true;
+
     document.body.appendChild(iframe);
   });
 </script>
