@@ -220,6 +220,28 @@
 {% endif %}
 
 
+<script>
+  $(function () {
+    arrMusicID = [35723328];  //musicID array
+    musicID = Math.floor(Math.random() * (arrMusicID.length)) //get a ran num as index
+    $('body').css('height', document.documentElement.clientHeight - 5);
+    if (!Number.isInteger(arrMusicID[musicID])) {
+      return;
+    } // load failed, bye~
+    var iframe = document.createElement('iframe');
+    iframe.id = "bgm";
+    iframe.style = "position: absolute; bottom: 0; left: 30px; border: 0px;";
+    iframe.src = '//music.163.com/song/media/outer/url?id=35723328.mp3';
+    console.log(iframe.src)
+    iframe.frameborder = "no";
+    iframe.marginwidth = "0";
+    iframe.marginheight = "0";
+    iframe.width = 250;
+    iframe.height = 52;
+    document.body.appendChild(iframe);
+  });
+</script>
+
 
 <!-- Side Catalog -->
 {% if page.catalog %}
